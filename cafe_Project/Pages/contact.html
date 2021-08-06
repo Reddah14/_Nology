@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../Styles/styles.css">
+    <link rel="stylesheet" href="../Styles/contact.css">
+    <title>Calum's Cafe</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a href="home.html">Home</a>
+        </li>
+        <li>
+          <a href="contact.html">Contact Us</a>
+        </li>
+        <li>
+          <a href="book.html">Book</a>
+        </li>
+        <li>
+          <a href="bookings.html">Bookings</a>
+        </li>
+      </ul>
+    </nav>
+
+    <header>
+      <h1>Contact Us - Calum's Cafe</h1>
+      <p>Best coffee in Sydney</p>
+    </header>
+
+    <main>
+      <form class="contact-form" onsubmit="submitMessage(event);">
+        <!-- email -->
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required>
+        <!-- full name -->
+        <label for="fullName">Full Name:</label>
+        <input type="text" name="fullName" id="fullName" required>
+        <!-- Reason for comment -->
+        <label for="feedackType">Feedback Type:</label>
+        <select name="feedbackType" id="feedbackType">
+          <option value="review">Review</option>
+          <option value="complaint">Complaint</option>
+          <option value="event">Book Event</option>
+        </select>
+        <!-- Comment -->
+        <label for="comment">Comment:</label>
+        <textarea name="comment" id="comment" cols="30" rows="3" required></textarea> <!-- cols => how many charact textarea can hold --> <!-- rows => 3 times a regular input -->
+        
+        <!-- clear button -->
+        <input type="reset" value="Clear form" />
+<!--    <button onclick="resetForm()">Clear</button> -->
+
+        <!-- submit button -->
+        <input type="submit" value="Submit">
+      </form>
+    </main>
+
+    <footer>
+      <div class="form-title-section">
+        <h3>Contact Messages</h3>
+        <br>
+        <button onclick="deleteMessages();">Clear Messages</button>
+      </div>
+      <div class="form-wrapper">
+        <dl id="currentMessages">
+  
+        </dl>
+      </div>
+    </footer>
+
+    <script>
+
+      function deleteMessages() {
+        console.log('works!');
+
+        if (window.sessionStorage.getItem('messages')) {
+          window.sessionStorage.removeItem('messages');
+        }
+
+        renderMessages();
+      }
+
+      function submitMessage(event) {
+        event.preventDefault();
+        console.log("Its working man!");
+        
+        // getting info from the page and store it
+        const email = document.getElementById("email").value;
+        const fullName = document.getElementById("fullName").value;
+        const feedbackType = document.getElementById("feedbackType").value;
+        const comment = document.getElementById("comment").value;
+          
+        // setting an object with the info retrieved before
+        const messageObject = {
+          email, fullName, feedbackType, comment
+        }
+
+        console.log(messageObject); // loggingOut the object with the form input
+
+        let currentMessages = [];
+
+        if (window.sessionStorage.getItem("messages")) { // checkin if there is something stored with a "messages" key, in order to store it in our "currentMessages" array(above).
+          currentMessages = 
+            JSON.parse(
+              window.sessionStorage.getItem("messages")
+            ); // IF positive store it in our empty variable (currentMessages) in an object form (JSON.parse)
+        }
+
+        currentMessages.push(messageObject); //adding my object to currentMessages array
+
+        // reseting the value of "messages" at sessionStorage to the new list ( with my object added )
+        window.sessionStorage.setItem(
+          "messages",
+          JSON.stringify(currentMessages)
+        );
+
+        renderMessages(); // rendering everytime we submit the form
+      }
+
+      function renderMessages() {
+        // IF "messages" keys exist in sessionStorage, will try to parse the value
+        // OTHERWISE "messages" is going to be an empty array
+        let currentMessages = [];
+
+        if (window.sessionStorage.getItem("messages")) {
+          currentMessages = 
+            JSON.parse(
+              window.sessionStorage.getItem("messages")
+            );
+        }
+
+        // for each object in sessionStorage need to create a list item for <footer> <dl>(above)
+        let listItems = [];
+
+        for(let i = 0; i < currentMessages.length; i++) {
+          let listItem = "";
+          const currentMessage = currentMessages[i];
+
+          // creating the descriptive list item
+            //creating data title <dt>
+          listItem += `<dt>${currentMessage.fullName} - ${currentMessage.email}</dt>`; // this is a template string => `` It allow us to use variables inside of a string
+            //creating data for the list item <dd> - CREATING AN HTML STRING         
+          listItem += `<dd>${currentMessage.feedbackType}: ${currentMessage.comment}</dd>`;
+              // adding space between the item
+          listItem += `<br />`;
+
+          listItems.push(listItem);
+        }
+
+        let descList = document.getElementById('currentMessages');
+        descList.innerHTML = listItems.join('') // everything joins with NO DELIMITER
+      }
+
+      renderMessages(); //rendering when we refresh the page
+    </script>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Box Model Demonstration</title>
+  </head>
+  <body>
+    <p class="paragraph-class">Paragraph 1</p>
+    <p class="paragraph-class">Paragraph 1</p>
+    <p class="paragraph-class">Paragraph 1</p>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      .paragraph-class {
+        border: 2px solid black;
+        padding: 20px; /* this padding property creates space BETWEEN the content of an element (paragraph 1 for instance) AND the border of an element */
+        margin: 20px;
+      }
+
+/* !!! IMPORTANT NOTES 
+        
+        ** THE BOX MODEL BASICALLY SPECIFIES THE ORDER IN WICH THINGS ARE PLAYED TO AN ELEMENT **
+
+          - First thing that CSS will do:
+            1. will assess the height and width of the element.
+          
+          - Second thing that CSS will do:
+            2. will ADD padding to the element.
+
+          - Third thing that CSS will do:
+            3. will ADD a border around padded area
+
+          - Fourth thing that CSS will do:
+            4. will ADD a margin outside of the border
+
+*/
+    </style>
+    <!-- mini-challenge -->
+    <hr><br>
+
+    <h2>miniChallenge</h2>
+
+    <h1>I'm the h1 Header</h1>
+
+    <br>
+
+    <p>I'm the paragraph</p>
+
+    <style>
+      h1 {
+        padding: 20px;
+        border: 2px solid lime;
+        margin: 20px;
+      }
+
+      p {
+        border: 3px solid red;
+        margin-bottom: 10px;
+      }
+    </style>
+
+  </body>
+</html>

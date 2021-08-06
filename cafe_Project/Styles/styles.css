@@ -1,0 +1,43 @@
+nav {
+  margin-bottom: 20px;
+}
+
+/* here we use this ">" child selector */
+
+nav > ul {
+  list-style-type: none;
+  border: 2px solid black;
+  height: 40px;
+
+  display: flex;
+  justify-content: space-around; /* WORKS HORITZONTALLY  */
+  align-items: center; /* will VERTICALLY align all the items to the center */
+}
+
+/* removing default padding and margin from the page */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* reaching our text in the page below */
+
+nav > ul > li > a {
+  color: #555;
+  text-decoration: none;
+}
+
+nav > ul > li > a:hover {
+  color: pink;
+  text-decoration: underline;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+header > h1 {
+  margin-bottom: 10px;
+}

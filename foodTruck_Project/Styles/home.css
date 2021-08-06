@@ -1,0 +1,26 @@
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+main > .gallery {
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px;
+}
+
+main > .gallery > img {
+  height: 200px;
+  width: 300px;
+  padding: 7px;
+  background-color:darkkhaki;
+  border: 1px solid darkkhaki;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(3, 90, 3, 0.2); /* offset-x | offset-y | blur-radius | spread-radius | color */
+}
+
+main > .gallery > img:hover {
+  box-shadow: 4px 12px 24px 6px rgba(3, 90, 3, 0.2);
+  cursor: pointer;
+}

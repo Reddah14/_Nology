@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS Combinators</title>
+  </head>
+  <body>
+    <div class="container">
+      <p>This is a direct child</p>
+      <p>This is another direct child</p>
+
+      <span>
+        <p>This is not a direct child</p>
+      </span>
+    </div>
+
+    <p>This is the first sibling</p>
+    <p>This is the second sibling</p>
+    <p>Third sibling</p>
+
+    <style>
+      .container {
+        border: 2px solid black;
+      }
+
+      .container p {
+        color: red;
+      }
+
+      .container > p {  /* this syntax will affect ONLY to the <p> which are DIRECT CHILDREN of container */
+        color: blue;
+      }
+
+      .container ~ p {  /* this syntax will affect TO ALL <p> siblings (order is important, ** if on bottom position here will override CSS BELOW ** )*/
+        color: orange;
+      }
+      
+      .container + p {  /* this syntax will affect only to the <p> which is the 1st sibling */
+        color: olivedrab;
+      }
+    </style>
+    
+    <br><br><br><br>
+
+      <!-- THIS IS THE MINI-CHALLENGE -->
+      
+    <div class="challenge">
+      <H1>Header Section</H1>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <br>
+
+    <h3>Main Section</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, ut.</p>
+
+    <style>
+      .challenge p {
+        color: red;
+      }
+
+      .challenge ~ p {
+        color: blue;
+      }
+/*  CORRECTION AND EASIER WAY 
+  
+        <body>
+
+            <!-- THIS IS THE MINI-CHALLENGE -->
+
+          <header>
+              <H1>Header Section</H1>
+              <p>Lorem ipsum dolor sit amet.</p>
+          </header>
+
+          <br>
+
+          <main>
+            <h3>Main Section</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, ut.</p>
+          </main>
+
+          <style>
+            header p {
+              color: red;
+            }
+
+            main p {
+              color: blue;
+            }
+          </style>
+        </body>      
+*/
+    </style>
+  </body>
+</html>

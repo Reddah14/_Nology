@@ -1,0 +1,165 @@
+body {  
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+nav {
+  background: url(../img/boat.jpg);
+  height: 150px;
+  margin-top: 20px;
+}
+
+nav > ul > li {
+  margin-top: -30px;
+}
+
+nav > h1 {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 500%;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header > a {
+  margin: 20px 6px 40px 6px;
+  color: #6A97BE;
+  text-decoration: none;
+  border: 2px #6A97BE solid;
+  padding: 10px 30px;
+  font-size: 14px;
+}
+
+header > a:hover {
+  color: #F26622;
+  border: 2px #F26622 solid;
+  padding: 10px 30px;
+  font-size: 14px;  
+ }
+
+main {
+  display: flex;
+  justify-content: center;
+  background: url(../img/boat1.jpg);
+  min-height: 500px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.gallery > a {
+  text-decoration: none;
+}
+
+.gallery > .price-card {
+  border: 2px solid seashell;
+  height: 400px;
+  width: 300px;
+  max-height: 400px;
+  margin-top: 40px;
+  background-color: seashell;
+  text-align: center;
+  border-radius: 9px;
+}
+
+.gallery > .price-card:hover {
+  cursor: pointer;
+  border: 2px solid #6A97BE;
+}
+
+.gallery > .price-card > h3 {
+  color: #6A97BE;
+  text-align: center;
+  font-size:x-large;
+}
+
+#cardImage {
+  width: 250px;
+  height: 350px;
+  margin-top: 10px;
+  border-radius: 9px;
+}
+
+.container {
+  margin-top: 80px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr ;
+  grid-template-columns: 1fr;
+  text-align: center;
+  background-color: #6A97BE;
+}
+
+.container > article > h2 {
+  color: seashell;
+  margin: 20px;
+  font-size: xx-large;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.box {
+  display: flex;
+  max-height: 500px;
+}
+
+#boxText {
+  margin: 20px;
+  text-align: right;
+  overflow: auto;
+}
+
+#imgPrice {
+  margin-right: 15px;
+  border: 1.5px solid seashell;
+  border-radius: 5px;
+  max-width: 700px;
+  max-height: auto
+  ;
+}
+.spacer {
+  margin-top: 100px;
+  background-color: seashell;
+  height: 100px;
+  width: 100%;
+}
+
+button {
+  justify-content: center;
+  width: 200px;
+  color: #6A97BE;
+}
+
+.book-link {
+  margin-top: 50px;
+  margin-bottom: 55px;
+  max-height: 300px;
+}
+
+.book-link > a {
+  padding: 18px 25px;
+  color: seashell;
+  text-decoration: none;
+  border: 2px seashell solid;
+  border-radius: 5px;
+  font-size: 30px;
+}
+
+.book-link > a:hover {
+  color: pink;
+  border: 2px pink solid; 
+ }
+
+ .spacer-end {
+  background-color: seashell;
+  height: 10px;
+  width: 100%;
+  margin-top: -10px;
+ }

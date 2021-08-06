@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Styles/styles.css">
+    <link rel="stylesheet" href="../Styles/bookings.css">
+    <link rel="icon" type="image/x-icon" href="../img/cloud.ico">
+
+    <title>Sea Clouds - Bookings</title>
+  </head>
+
+  <body id="topScreen">
+
+    <div class="social-networks">
+
+      <a href="https://www.facebook.com" target="_blank">
+        <img src="../img/facebook.png" alt="facebook">
+      </a>
+
+      <a href="https://www.twitter.com" target="_blank">
+        <img src="../img/twitter.png" alt="twitter">
+      </a>
+
+    </div>
+
+    <nav>
+      <ul>
+
+        <li>
+          <a href="../Pages/hola.html">Home</a>
+        </li>
+
+        <li>
+          <a href="../Pages/about.html">About Us</a>
+        </li>
+
+        <li>
+          <a href="../Pages/pricing.html">Pricing</a>
+        </li>
+
+        <li>
+          <a href="../Pages/bookings.html" class="active">Bookings</a>
+        </li>
+
+      </ul>
+      
+      <h1>let's have fun</h1>
+    </nav>
+
+    <header>
+      <a href="../Pages/about.html#subscribeForm">
+        Subscribe Here
+      </a>
+      <a href="../Pages/bookings.html#contactUs">
+        Contact Us
+      </a>
+    </header>
+
+    <main>
+      <div>
+        <h1>
+          Let us customize your booking
+        </h1>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis earum sunt non repellat, tenetur quam! Dolor tempora quibusdam at labore illum possimus corporis dolores optio facilis sed iusto doloribus, enim libero ut architecto expedita quaerat rem sequi ullam voluptate in aliquam! Unde, ab eum natus repellendus dolor itaque rem, vitae, ducimus voluptatum eligendi a. Neque delectus impedit quam rem porro optio dolores quibusdam harum, dolor dolore numquam incidunt dolorum deleniti doloribus, ipsum quidem, blanditiis cupiditate maiores! Modi quam totam excepturi dolore, corrupti tenetur minus. Quas atque exercitationem numquam cum mollitia magnam blanditiis temporibus minus veniam, nostrum deserunt repellendus ut placeat harum fuga ipsa animi similique odit a quisquam reprehenderit illo, doloremque esse? Obcaecati soluta aliquam asperiores porro! Temporibus sequi blanditiis pariatur officiis! Delectus, rerum voluptas, error magnam nam iusto dolore ab hic, provident vitae qui praesentium numquam vel facere dolores eum similique laborum? Consectetur quis sapiente modi culpa minima officiis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio iusto cumque, quae sunt autem iure quo eveniet natus similique repellat in ullam minus soluta modi nesciunt illo aut. Obcaecati, at dolore deserunt asperiores culpa est quo quas labore reprehenderit quaerat sit quam quasi dolor accusamus! Delectus voluptatem modi explicabo deserunt soluta reprehenderit distinctio quod temporibus laborum nisi enim cum eligendi dolorum, quos ex dicta eaque nulla sint, adipisci repellendus ut? Culpa illo reprehenderit ipsa enim nulla impedit quidem a ab obcaecati ex ipsam atque perspiciatis laboriosam saepe, vel eligendi mollitia hic dolorem soluta sapiente reiciendis doloribus. Eligendi consequuntur corporis maiores.
+        </p>
+
+        <div class="contact-us" id="contactUs">
+          <h1>
+            where to find us
+          </h1>
+          <address>
+            Customer Service Telephone Number
+            <br>
+            +34 77 777 7777
+            <br>
+            Email
+            <br>
+            customerservice@seaclouds.com
+          </address>
+
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8415.580649012249!2d3.031993661931787!3d41.777517696528214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12bb06eaf45490d1%3A0xa781f4ac94f46070!2sCala%20Jonca!5e0!3m2!1ses!2ses!4v1586024683634!5m2!1ses!2ses"
+            width="400" 
+            height="300"
+            frameborder="0"
+            style="border:0;"
+            aria-hidden="false"
+            tabindex="0"
+          >
+          </iframe>
+          
+        </div>
+      </div>
+
+
+      <form
+        class="contact-form"
+        onsubmit="submitBookingForm(event)"
+
+      >
+        <label for="fullName">Full Name:</label>
+        <input type="text" name="fullName" id="fullName" required>
+
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email" required>
+
+        <label for="email">Mobile Number:</label>
+        <input type="text" name="mobileNumber" id="mobileNumber">          
+
+        <label for="packageType">Package Desired:</label>
+        <select name="packageType" id="packageType" required>
+          <option value="aperitivo">Afternoon Aperitivo</option>
+          <option value="dinner">Fresh Dinner</option>
+          <option value="overnight">Overnight Relax</option>
+        </select>
+
+        <label for="userNeeds">What do you need ?</label>
+        <textarea name="comment" id="comment" cols="10" rows="5"></textarea>
+
+
+        <input type="reset" value="CLEAR"/>
+        <input type="submit" value="SEND">
+      </form>
+
+      <script src="../functions/submitBookingForm.js">
+      
+      </script>
+
+    </main>
+
+    <footer>
+
+      <p>Copyright &copy; 
+      <span></span> <!-- currentYear -->
+      <span id="footerName">Sea Clouds</span> 
+      - Rights Reserved
+      </p>
+
+      <a href="#topScreen"><img src="../img/arriba.png" alt="scrollUp"></a>
+
+    </footer>
+
+    <script src="../functions/showCurrentYear.js"></script>
+
+  </body>
+</html>

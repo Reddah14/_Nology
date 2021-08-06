@@ -1,0 +1,24 @@
+main {
+  display: flex; /* allow us to dinamically arrange objects in a container */
+  justify-content: center;
+}
+
+main > .gallery {
+  display: grid; /* allow us to display items in a row & column format */
+  grid-template-columns: 1fr 1fr 1fr; /* this will create 3 colums with the same width */
+  grid-gap: 10px;
+}
+
+main > .gallery > img {
+  height: 300px;
+  width: 200px;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* offset-x | offset-y | blur-radius | spread-radius | color */
+}
+
+main > .gallery > img:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}

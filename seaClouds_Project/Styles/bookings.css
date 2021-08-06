@@ -1,0 +1,108 @@
+body {  
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+nav {
+  background: url(../img/boat.jpg);  
+  height: 150px;
+  margin-top: 20px;
+}
+
+nav > ul > li {
+  margin-top: -30px;
+}
+
+nav > h1 {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 500%;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header > a {
+  margin: 20px 6px 40px 6px;
+  color: #6A97BE;
+  text-decoration: none;
+  border: 2px #6A97BE solid;
+  padding: 10px 30px;
+  font-size: 14px;
+}
+
+header > a:hover {
+  color: #F26622;
+  border: 2px #F26622 solid;
+  padding: 10px 30px;
+  font-size: 14px;  
+ }
+
+main {
+  display: flex;
+  justify-content: center;
+  background-image: url(../img/boat.jpg);
+  min-height: 100vh;
+  min-width: 100%;
+}
+
+main > .contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  border: 3px solid seashell;
+  border-radius: 7px;
+  padding: 15px;
+  background-color:#6A97BE;
+  max-height: 400px;
+  min-height: 450px;
+  min-width: 40%;
+  margin: 30px 45px 0 15px;
+}
+
+main > .contact-form > input, select,option, textarea {
+  color: #6A97BE;
+  font-size: 17px;
+  margin: 5px;
+}
+
+main > div > h1 {
+  color: seashell;
+  text-transform: capitalize;
+  font-size: 300%;
+  letter-spacing: 0.8;
+  margin-left: 25px;
+}
+
+main > div > p {
+  color:seashell;
+  font-weight: 800;
+  letter-spacing: 0.8;
+  margin-top: 25px;
+  margin-left: 40px;
+  max-height: 500px;
+}
+
+.contact-us {
+  min-width: 650px;
+  margin-left: 100px;
+  text-align: center;
+}
+
+main > div > div > h1 {
+  margin-top: 25px;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 400%;
+  font-weight: 300;
+}
+
+main > div > div > iframe {
+  min-width: 100%;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
