@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* width = padding + border + content */
+  box-sizing: border-box;
+}
+
+section {
+  border: 10px solid teal;
+  /* this will take the whole of the screen ( whole viewport height ) */
+  min-height: 100vh; /* FIX TO OVERFLOW (when items go out of space)=> by minimum should be this height, but can adapt if it goes over */
+
+}
+
+.flex-item {
+  height: 100px;
+  width: 100px;
+  background-color: gold;
+  margin: 20px;
+  border-radius: 20px;
+  font-size: 30px;
+  color: dimgray;
+
+  /* USE FLEX TO CENTER A SINGLE ITEM INSIDE AN ELEMENT */
+  display: flex;
+  justify-content: center; /* horizontal alignment */
+  align-items: center; /* vertical alignment */
+  transform: rotate(90deg); /* rotate item */
+}
+
+/*  
+flex-direction -> row by default
+
+=> justify-content -> horizontal axis
+
+- flex-start -> all at start(default)
+- flex-end -> all at the end
+- center -> all in the center
+- space-between -> spread start center end (be)
+- space-around -> same as between but some margin left&right
+- space-evenly -> same space between all elements
+
+=> align-items -> vertical axis
+
+- center -> align vertical in the center
+- flex-start -> position on the top
+- flex-end -> position at the bottom
+- stretch byt default -> at the top
+- baseline -> at the top
+*/
+
+.flex-container-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flex-container-column {
+  display: flex; /*  */
+  flex-direction: column;
+  justify-content: center; /* once you set a flex box it will give access to this properties */
+  align-items: center; 
+}
+/* .container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 400px;
+  height: 350px;
+  border: 2px solid grey;
+}
+
+.flex1 {
+  background-color: grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 350px;
+  width: 100px;
+  text-align: center;
+}
+
+.flex2 {
+  background-color: white;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  height: 350px;
+  width: 200px;
+  margin: 10px;
+}
+
+.flex2 > p {
+  background-color: thistle;
+}
+
+.flex3 {
+  background-color: grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 350px;
+  width: 100px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+}
+ */
+
+ /* Flex wrap -> default no-wrap */
+/* ass soon as runs out of space */
+ .flex-container-wrap {
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   flex-wrap: wrap;
+ }
+
+ .flex-container-wrap .flex-item {
+  width: 300px;
+  height: 300px;
+}
+
+/* ">" this will ONLY select the direct children */
+
