@@ -1,19 +1,22 @@
-/* button {
-  background: $secondary-color;
-  color: $text-color;
-  margin: 3px;
-  width: 100px;
-  border-radius: 6px;
-} */
+/* HERE SHOULD GO STYLES THAT APPLY TO ALL BUTTONS */
 @import './_typography';
 
 .btn-primary {
   background: $secondary-color;
   color: $text-color;
-  margin: 3px;
   width: 100px;
   height: 40px;
   border-radius: 6px;
   font-family: $secondary-font;
   font-size: large;
+}
+
+.btn-form {
+  background-color: blue;
+  color: $text-color;
+  width: 100px;
+  height: 40px;
+  border-radius: 6px;
+  font-family: $secondary-font;
+  margin: 5px;
 }
