@@ -1,10 +1,4 @@
-/* button {
-  background: $secondary-color;
-  color: $text-color;
-  margin: 3px;
-  width: 100px;
-  border-radius: 6px;
-} */
+/* HERE SHOULD GO STYLES THAT APPLY TO ALL BUTTONS */
 .btn-primary {
   background: #BF9000;
   color: white;
@@ -37,7 +31,7 @@ body {
 }
 
 .nav {
-  min-width: 100%;
+  min-width: 100vw;
   background-color: #1C4587;
   display: flex;
   justify-content: space-between;
@@ -51,7 +45,6 @@ body {
     &__title {
 
     }
-
   */
 }
 .nav__title {
@@ -73,7 +66,6 @@ main {
   min-height: 100vh;
 }
 main .hero {
-  justify-items: center;
   text-align: center;
 }
 main .hero__title {
