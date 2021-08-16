@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+@media screen and (max-width: 541px) {
+  .calculator-body {
+    background-color: #2d2d5a;
+    height: 635px;
+    width: 350px;
+    border-radius: 20px;
+    color: whitesmoke;
+  }
+
+  .calculator-body__screen {
+    width: 100%;
+    height: 77px;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 47px;
+    background-color: black;
+    color: whitesmoke;
+  }
+}
