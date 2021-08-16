@@ -38,8 +38,14 @@ body {
 
   .calculator-body__buttons-row {
     text-align: center;
-    align-items: center;
-    width: 90%;    
+    align-items: center;    
     height: 60px;
+  }
+
+  .button--number {
+    height: 50px;
+    width: 60px;
+    margin-right: 0px;
+    border-radius: 10px;
   }
 }
