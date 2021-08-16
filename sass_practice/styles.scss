@@ -1,0 +1,81 @@
+// @import "./assets/styles/variables";
+// @use "./assets/styles/variables"; /* check this one */
+
+@import './assets/styles/_variables';
+@import './assets/styles/_buttons';
+@import './assets/styles/_typography';
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.nav {
+  min-width: 100vw;
+  background-color: $primary-color;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+
+/* 
+2 ways of syntax for applying styles to children or descendants   
+  .nav__title {
+
+  }
+
+  &__title {
+
+  }
+*/
+
+  &__title {
+    color: $text-color;
+    align-self: center;
+    margin-left: 15px;
+    font-family: $primary-font;
+    font-weight: 100;
+  }
+
+  &__login {
+    margin: 5px;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  min-height: 100vh;
+
+  .hero {
+    text-align: center;
+
+    &__title {
+      color: $primary-color;
+      font-family: $secondary-font;
+      font-weight: bold;
+      font-size: 200%;
+     }
+  
+    &__subtitle {
+    font-family: $primary-font;
+    }
+
+    &__form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      border: 2px solid gray;
+      height: 200px;
+      width: 40%;
+    }
+  }
+}
