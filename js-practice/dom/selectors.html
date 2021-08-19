@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selector</title>
+    <style>
+      * {
+        margin: 0;
+      }
+
+      main {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      div {
+        background-color: pink;
+      }
+
+      .danger {
+        background-color: palevioletred;
+        border: 10px solid crimson;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div></div>
+      <div></div>
+      <div></div>
+
+      <div class="middle"></div>
+      <div class="middle"></div>
+      <div class="middle"></div>
+
+      <div></div>
+      <div></div>
+      <div id="end"></div>
+    </main>
+    <!-- internal js -->
+    <script >
+      //console.log({document}); // see all properties from the html
+      //console.dir(document);
+
+        // SELECTORS
+        // document.getElementById("end")
+        // document.getElementByClassName("middle")
+        // document.getElementByTagName("div")
+
+        //  QUERY SELECTOR -> css selector -> get a html element
+
+        // tag name
+        const firstSquare = document.querySelector("div"); // this gets the first item AND STOPS
+        // querySelectorAll -> will get ALL items
+        //console.dir(firstSquare);
+        firstSquare.style.backgroundColor = "limegreen";
+
+        // id
+        const lastSquare = document.querySelector("#end") // HERE WE FIND THE ELEMENT - use of "#" just like selecting by ID on CSS
+        //console.dir(lastSquare);
+
+        lastSquare.classList.remove("helen"); // removing a class
+        lastSquare.classList.add("danger"); // aplying ".danger" class
+        // can also do =>  lastSquare.classList += "danger";
+
+        //  QUERY SELECTOR ALL -> MULTIPLE ITEMS -> NODE LIST
+        // class
+
+        const middleSquares = document.querySelectorAll("middle"); // this will get ALL elements with class "middle"
+        console.table(middleSquares);
+
+        middleSquares[2].style.backgroundColor = "blue";
+
+        // iterator on a node list
+
+        middleSquares.forEach(square => {
+          square.style.backgroundColor = "blue";
+        });
+
+
+    </script>
+  </body>
+</html>
