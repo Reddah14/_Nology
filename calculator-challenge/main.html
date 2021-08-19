@@ -13,12 +13,19 @@
     <main class="row calculator-body">
       <!-- screen -->
       <div class="col-12">
-        <textarea readonly class="calculator-body__screen" name="ouputScreen" id="" cols="5" rows="1">12</textarea>
+        <textarea
+          readonly
+          class="calculator-body__screen"
+          name="output-screen"
+          id="output-screen"
+          cols="5"
+          rows="1"
+        >12</textarea>
       </div>
       <!-- buttons -->
       <div class="row calculator-body__buttons-row">
         <div class="col-3">
-          <button class="button--number">
+          <button class="button--clear">
             C
           </button>
         </div>
@@ -110,7 +117,7 @@
       
       <div class="row calculator-body__buttons-row">
         <div class="col-4">
-          <button class="button--number">
+          <button class="button--zero">
             0
           </button>
         </div>
@@ -120,12 +127,13 @@
           </button>
         </div>
         <div class="col-6">
-          <button class="button--number">
+          <button class="button--equal">
             =
           </button>
         </div>
       </div>
 
     </main>
+    <script src="./main.js"></script>
   </body>
 </html>
