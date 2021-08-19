@@ -93,5 +93,23 @@ body {
     font-size: 40px;
     background-color:brown;
     border: 2px solid red;    
-  }  
+  }
+
+  .button--point {
+    height: 65px;
+    width: 65px;
+    border-radius: 20px;
+    font-size: 40px;
+    background-color:deepskyblue;
+    border: 2px solid red;     
+  }
+
+  .button--special-operation {
+    height: 60px;
+    width: 60px;
+    border-radius: 20px;
+    font-size: 35px;
+    background-color:green;
+    border: 2px solid red;    
+  }
 }
