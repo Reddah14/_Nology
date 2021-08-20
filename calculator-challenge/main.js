@@ -27,16 +27,39 @@ const button_Equal = document.querySelector("#equal-btn");
 const button_Clear = document.querySelector("#clear-btn");
 
 button_Equal.addEventListener("click", event => {
+  // number_A -> MUST have value before pressing equal Btn
   if (number_A === null) {
     displayScreen.value = "3RR😵R"    
   } else if (number_A) {
     number_B = parseInt(displayScreen.value);
   }
-  
+
   if (operation === "sum") {
     result = number_A + number_B;
     displayScreen.value = result;
+    number_A = result;
+    number_B = null;
+    operation = null;
+  } else if ( operation === "minus") {
+    result = number_A - number_B;
+    displayScreen.value = result;
+    number_A = result;
+    number_B = null;    
+    operation = null;
+  } else if ( operation === "multiply") {
+    result = number_A * number_B;
+    displayScreen.value = result;
+    number_A = result;
+    number_B = null;    
+    operation = null;
+  } else if ( operation === "divide") {
+    result = number_A / number_B;
+    displayScreen.value = result;
+    number_A = result;
+    number_B = null;        
+    operation = null;
   }
+
 });
 
 button_Clear.addEventListener("click", event => {
