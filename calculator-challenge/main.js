@@ -97,44 +97,71 @@ button_Divide.addEventListener("click", event => {
 
 /* event listeners for numbers */
 button_Zero.addEventListener("click", event => {
+  if (displayScreen.value === "+" || displayScreen.value === "-" || displayScreen.value === "x" || displayScreen.value === "/" ) {
+    displayScreen.value = null;
+  }  
   displayScreen.value += 0;
-  console.log(typeof parseFloat(displayScreen.value)); // need to parse to convert into number (output is "string")
 });
 
 button_One.addEventListener("click", event => {
+  if (displayScreen.value === "+" || displayScreen.value === "-" || displayScreen.value === "x" || displayScreen.value === "/" ) {
+    displayScreen.value = null;
+  }
   displayScreen.value += 1;
-
-  console.log(number_A);
 });
 
 button_Two.addEventListener("click", event => {
+  if (displayScreen.value === "+" || displayScreen.value === "-" || displayScreen.value === "x" || displayScreen.value === "/" ) {
+    displayScreen.value = null;
+  }  
   displayScreen.value += 2;
 });
 
 button_Three.addEventListener("click", event => {
+  if (displayScreen.value === "+" || displayScreen.value === "-" || displayScreen.value === "x" || displayScreen.value === "/" ) {
+    displayScreen.value = null;
+  }  
   displayScreen.value += 3;
 });
 
 button_Four.addEventListener("click", event => {
+  if (displayScreen.value === "+" || displayScreen.value === "-" || displayScreen.value === "x" || displayScreen.value === "/" ) {
+    displayScreen.value = null;
+  }  
   displayScreen.value += 4;
 });
 
 button_Five.addEventListener("click", event => {
+  if (displayScreen.value === "+" || displayScreen.value === "-" || displayScreen.value === "x" || displayScreen.value === "/" ) {
+    displayScreen.value = null;
+  }  
   displayScreen.value += 5;
 });
 
 button_Six.addEventListener("click", event => {
+  if (displayScreen.value === "+" || displayScreen.value === "-" || displayScreen.value === "x" || displayScreen.value === "/" ) {
+    displayScreen.value = null;
+  }  
   displayScreen.value += 6;
 });
 
 button_Seven.addEventListener("click", event => {
+  if (displayScreen.value === "+" || displayScreen.value === "-" || displayScreen.value === "x" || displayScreen.value === "/" ) {
+    displayScreen.value = null;
+  }  
   displayScreen.value += 7;
 });
 
 button_Eight.addEventListener("click", event => {
+  if (displayScreen.value === "+" || displayScreen.value === "-" || displayScreen.value === "x" || displayScreen.value === "/" ) {
+    displayScreen.value = null;
+  }  
   displayScreen.value += 8;
 });
 
 button_Nine.addEventListener("click", event => {
+  if (displayScreen.value === "+" || displayScreen.value === "-" || displayScreen.value === "x" || displayScreen.value === "/" ) {
+    displayScreen.value = null;
+  }  
   displayScreen.value += 9;
 });
