@@ -1,7 +1,10 @@
 const displayScreen = document.querySelector("#output-screen");
+let number_A = null;
+let number_B = null;
+let result = null;
+let operation = null;
 
-/* events for displaying numbers */
-
+/* numbers */
 const button_Zero = document.querySelector("#zero-btn");
 const button_One = document.querySelector("#one-btn");
 const button_Two = document.querySelector("#two-btn");
@@ -13,13 +16,44 @@ const button_Seven = document.querySelector("#seven-btn");
 const button_Eight = document.querySelector("#eight-btn");
 const button_Nine = document.querySelector("#nine-btn");
 
+/* operations */
+const button_Sum = document.querySelector("#plus-btn");
+const button_Minus = document.querySelector("#minus-btn");
+const button_Multiply = document.querySelector("#multiply-btn");
+const button_Divide = document.querySelector("#divide-btn");
+
+const button_Equal = document.querySelector("#equal-btn");
+
+button_Equal.addEventListener("click", event => {
+  if (operation === "sum") {
+    result = number_A + number_B;
+    displayScreen.value = result;
+  }
+});
+
+button_Sum.addEventListener("click", event => {
+  number_A = parseFloat(displayScreen.value);
+  displayScreen.value = "+";
+  operation = "sum";
+
+  console.log(number_A);
+  console.log(typeof number_A);
+});
+
 button_Zero.addEventListener("click", event => {
   displayScreen.value += 0;
-  console.log(typeof parseInt(displayScreen.value)); // need to parse to convert into number (output is "string")
+  console.log(typeof parseFloat(displayScreen.value)); // need to parse to convert into number (output is "string")
 });
 
 button_One.addEventListener("click", event => {
   displayScreen.value += 1;
+
+  if (number_A === null) {
+    number_A = parseInt(displayScreen.value);    
+  } else {
+    number_B = parseInt(displayScreen.value);
+  }
+  console.log(number_A);
 });
 
 button_Two.addEventListener("click", event => {
