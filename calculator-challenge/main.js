@@ -61,8 +61,9 @@ button_Equal.addEventListener("click", event => {
     number_A = result;
     number_B = null;        
     operation = null;
+  } else {
+    displayScreen.value = "3RR😵R"    
   }
-
 });
 
 button_Clear.addEventListener("click", event => {
