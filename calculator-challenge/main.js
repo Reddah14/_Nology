@@ -4,7 +4,7 @@ let result = null;
 let operation = null;
 
 const displayScreen = document.querySelector("#output-screen");
-console.log(displayScreen.value);
+
 /* numbers */
 const button_Zero = document.querySelector("#zero-btn");
 const button_One = document.querySelector("#one-btn");
@@ -70,13 +70,29 @@ button_Clear.addEventListener("click", event => {
   result = null;
 });
 
+/* event listeners for operations */
 button_Sum.addEventListener("click", event => {
   number_A = parseFloat(displayScreen.value);
   displayScreen.value = "+";
   operation = "sum";
+});
 
-  console.log(number_A);
-  console.log(typeof number_A);
+button_Minus.addEventListener("click", event => {
+  number_A = parseFloat(displayScreen.value);
+  displayScreen.value = "-";
+  operation = "minus";
+});
+
+button_Multiply.addEventListener("click", event => {
+  number_A = parseFloat(displayScreen.value);
+  displayScreen.value = "x";
+  operation = "multiply";
+});
+
+button_Divide.addEventListener("click", event => {
+  number_A = parseFloat(displayScreen.value);
+  displayScreen.value = "/";
+  operation = "divide";
 });
 
 /* event listeners for numbers */
