@@ -23,15 +23,18 @@ const button_Minus = document.querySelector("#minus-btn");
 const button_Multiply = document.querySelector("#multiply-btn");
 const button_Divide = document.querySelector("#divide-btn");
 
+/* others */
 const button_Equal = document.querySelector("#equal-btn");
 const button_Clear = document.querySelector("#clear-btn");
+const button_Comma = document.querySelector("#comma-btn");
 
+/* others event listeners */
 button_Equal.addEventListener("click", event => {
   // number_A -> MUST have value before pressing equal Btn
   if (number_A === null) {
     displayScreen.value = "3RR😵R"    
   } else if (number_A) {
-    number_B = parseInt(displayScreen.value);
+    number_B = parseFloat(displayScreen.value);
   }
 
   if (operation === "sum") {
@@ -68,6 +71,13 @@ button_Clear.addEventListener("click", event => {
   number_B = null;
   operation = null;
   result = null;
+});
+
+button_Comma.addEventListener("click", event => {
+  const decimalSymbol = ".";
+
+  displayScreen.value += decimalSymbol;
+//  displayScreen.value = parseFloat(displayScreen.value);
 });
 
 /* event listeners for operations */
