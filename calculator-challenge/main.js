@@ -27,6 +27,11 @@ const button_Divide = document.querySelector("#divide-btn");
 const button_Equal = document.querySelector("#equal-btn");
 const button_Clear = document.querySelector("#clear-btn");
 const button_Comma = document.querySelector("#comma-btn");
+const button_toNegative = document.querySelector("#to-negative-btn");
+
+button_toNegative.addEventListener("click", event => {
+  displayScreen.value = - displayScreen.value;
+});
 
 /* others event listeners */
 button_Equal.addEventListener("click", event => {
