@@ -30,13 +30,6 @@ const button_Comma = document.querySelector("#comma-btn");
 const button_toNegative = document.querySelector("#to-negative-btn");
 const button_deleteOneChar = document.querySelector("#delete-one-character");
 
-button_deleteOneChar.addEventListener("click", event => {
-  let stringToDeleteOneChar = displayScreen.value.toString();
-  let deletedString = stringToDeleteOneChar.slice(0,-1);
-
-  displayScreen.value = parseFloat(deletedString);
-});
-
 /* others event listeners */
 button_Equal.addEventListener("click", event => {
     // number_A -> MUST have value before pressing equal Btn
@@ -104,6 +97,17 @@ button_Comma.addEventListener("click", event => {
   const decimalSymbol = ",";
 
   displayScreen.value += decimalSymbol;
+});
+
+button_toNegative.addEventListener("click", event => {
+  displayScreen.value = - displayScreen.value;
+});
+
+button_deleteOneChar.addEventListener("click", event => {
+  let stringToDeleteOneChar = displayScreen.value.toString();
+  let deletedString = stringToDeleteOneChar.slice(0,-1);
+
+  displayScreen.value = parseFloat(deletedString);
 });
 
 /* event listeners for operations */
