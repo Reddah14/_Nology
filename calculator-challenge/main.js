@@ -30,22 +30,39 @@ const button_Comma = document.querySelector("#comma-btn");
 
 /* others event listeners */
 button_Equal.addEventListener("click", event => {
-  // number_A -> MUST have value before pressing equal Btn
+    // number_A -> MUST have value before pressing equal Btn
   if (number_A === null) {
     displayScreen.value = "3RR😵R"    
   } else if (number_A) {
-    number_B = parseFloat(displayScreen.value);
+    let decimalValue = null;
+    // setting number_B
+    if (displayScreen.value.indexOf(",") !== -1) {
+      decimalValue = displayScreen.value.replace(",", ".");
+      number_B = parseFloat(decimalValue);
+    } else {
+      number_B = parseFloat(displayScreen.value);
+    }
   }
 
   if (operation === "sum") {
     result = number_A + number_B;
-    displayScreen.value = result;
+
+    if (result.toString().indexOf(".") !== -1) {
+      let resultToFormat = result.toString();
+      const toReplace = ".";
+      const toAdd = ",";
+      let formattedResult = resultToFormat.replace(toReplace, toAdd);
+      displayScreen.value = formattedResult;
+    } else {
+      displayScreen.value = result;
+    }
     number_A = result;
     number_B = null;
     operation = null;
   } else if ( operation === "minus") {
     result = number_A - number_B;
     displayScreen.value = result;
+    
     number_A = result;
     number_B = null;    
     operation = null;
@@ -75,17 +92,26 @@ button_Clear.addEventListener("click", event => {
 });
 
 button_Comma.addEventListener("click", event => {
-  const decimalSymbol = ".";
+  const decimalSymbol = ",";
 
   displayScreen.value += decimalSymbol;
-//  displayScreen.value = parseFloat(displayScreen.value);
 });
 
 /* event listeners for operations */
 button_Sum.addEventListener("click", event => {
-  number_A = parseFloat(displayScreen.value);
-  displayScreen.value = "+";
-  operation = "sum";
+  let decimalValue = null;
+
+  if (displayScreen.value.indexOf(",") !== -1) {
+    decimalValue = displayScreen.value.replace(",", ".");
+    number_A = parseFloat(decimalValue);
+    displayScreen.value = "+";
+    operation = "sum";
+  } else {
+    number_A = parseFloat(displayScreen.value);
+    displayScreen.value = "+";
+    operation = "sum";
+  }
+
 });
 
 button_Minus.addEventListener("click", event => {
