@@ -11,11 +11,129 @@
   </head>
   <body>
     <main class="row calculator-body">
+
+      <!-- screen -->
       <div class="col-12">
-        <textarea readonly class="calculator-body__screen" name="ouputScreen" id="" cols="5" rows="1">
-12
-        </textarea>
+        <input
+          readonly
+          class="calculator-body__screen"
+          name="output-screen"
+          id="output-screen"
+        >
+
       </div>
+      <!-- buttons -->
+      <div class="row calculator-body__buttons-row">
+        <div class="col-3">
+          <button id="clear-btn" class="button--clear">
+            C
+          </button>
+        </div>
+        <div class="col-3">
+          <button id="positive-to-negative-btn" class="button--special-operation">
+            +/-
+          </button>
+        </div>
+        <div class="col-3">
+          <button id="percentage-btn" class="button--special-operation">
+            %
+          </button>
+        </div>
+        <div class="col-3">
+          <button id="divide-btn" class="button--operation">
+            /
+          </button>
+        </div>
+      </div>
+
+      <div class="row calculator-body__buttons-row">
+        <div class="col-3">
+          <button id="seven-btn" class="button--number">
+            7
+          </button>
+        </div>
+        <div class="col-3">
+          <button id="eight-btn" class="button--number">
+            8
+          </button>
+        </div>
+        <div class="col-3">
+          <button id="nine-btn" class="button--number">
+            9
+          </button>
+        </div>
+        <div class="col-3">
+          <button id="multiply-btn" class="button--operation">
+            x
+          </button>
+        </div>
+      </div>
+      
+      <div class="row calculator-body__buttons-row">
+        <div class="col-3">
+          <button id="four-btn" class="button--number">
+            4
+          </button>
+        </div>
+        <div class="col-3">
+          <button id="five-btn" class="button--number">
+            5
+          </button>
+        </div>
+        <div class="col-3">
+          <button id="six-btn" class="button--number">
+            6
+          </button>
+        </div>
+        <div class="col-3">
+          <button id="minus-btn" class="button--operation">
+            -
+          </button>
+        </div>
+      </div>
+      
+      <div class="row calculator-body__buttons-row">
+        <div class="col-3">
+          <button id="one-btn" class="button--number">
+            1
+          </button>
+        </div>
+        <div class="col-3">
+          <button id="two-btn" class="button--number">
+            2
+          </button>
+        </div>
+        <div class="col-3">
+          <button id="three-btn" class="button--number">
+            3
+          </button>
+        </div>
+        <div class="col-3">
+          <button id="plus-btn" class="button--operation">
+            +
+          </button>
+        </div>
+      </div>
+      
+      <div class="row calculator-body__buttons-row">
+        <div class="col-4">
+          <button id="zero-btn" class="button--zero">
+            0
+          </button>
+        </div>
+        <div class="col-2">
+          <button id="comma-btn" class="button--point">
+            ,
+          </button>
+        </div>
+        <div class="col-6">
+          <button id="equal-btn" class="button--equal">
+            =
+          </button>
+        </div>
+      </div>
+
     </main>
+    <script src="./main.js"></script>
   </body>
 </html>
