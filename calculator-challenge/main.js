@@ -28,9 +28,13 @@ const button_Equal = document.querySelector("#equal-btn");
 const button_Clear = document.querySelector("#clear-btn");
 const button_Comma = document.querySelector("#comma-btn");
 const button_toNegative = document.querySelector("#to-negative-btn");
+const button_deleteOneChar = document.querySelector("#delete-one-character");
 
-button_toNegative.addEventListener("click", event => {
-  displayScreen.value = - displayScreen.value;
+button_deleteOneChar.addEventListener("click", event => {
+  let stringToDeleteOneChar = displayScreen.value.toString();
+  let deletedString = stringToDeleteOneChar.slice(0,-1);
+
+  displayScreen.value = parseFloat(deletedString);
 });
 
 /* others event listeners */
