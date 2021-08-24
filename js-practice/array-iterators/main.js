@@ -54,7 +54,7 @@ console.log(squareRootAgeArray);
 // Filter() - Creates smaller arrays based on conditions
 // Will return true o false
 
-const agesThatCanGoToThePub = ages.filter(age => {
+const agesThatCanGoToThePub = ages.filter(age => { 
   //Returns "true" or "false" && write the condition on the return!!
   console.log(age >= 18);
 
@@ -83,3 +83,4 @@ const evenAges = ages.filter( age => {
 
 console.table(ages);
 console.table(evenAges);
+

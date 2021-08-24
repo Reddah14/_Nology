@@ -4,6 +4,16 @@ const heading = document.querySelector("#heading");
 const button = document.querySelector("#button");
 
 // INLINE EVENTS -> ADDING FUNCTIONS TO THE HTML
+console.log({document});
+
+const input = document.querySelector('input');
+
+input.onkeyup = logKey;
+
+function logKey(e) {
+  console.log(e);
+}
+
 
 const handleHover = () => {
   //alert("Hello from the handleOver function")

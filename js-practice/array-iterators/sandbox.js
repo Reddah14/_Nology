@@ -1,6 +1,6 @@
 
 let customer = {
-  fullName: 'max tomy'
+  fullName: 'max tomyee'
 }
 let nameArr = customer.fullName.split(" ");
 console.log();

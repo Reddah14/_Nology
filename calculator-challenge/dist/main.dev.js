@@ -29,9 +29,7 @@ var button_Equal = document.querySelector("#equal-btn");
 var button_Clear = document.querySelector("#clear-btn");
 var button_Comma = document.querySelector("#comma-btn");
 var button_toNegative = document.querySelector("#to-negative-btn");
-button_toNegative.addEventListener("click", function (event) {
-  displayScreen.value = -displayScreen.value;
-});
+var button_deleteOneChar = document.querySelector("#delete-one-character");
 /* others event listeners */
 
 button_Equal.addEventListener("click", function (event) {
@@ -97,6 +95,14 @@ button_Clear.addEventListener("click", function (event) {
 button_Comma.addEventListener("click", function (event) {
   var decimalSymbol = ",";
   displayScreen.value += decimalSymbol;
+});
+button_toNegative.addEventListener("click", function (event) {
+  displayScreen.value = -displayScreen.value;
+});
+button_deleteOneChar.addEventListener("click", function (event) {
+  var stringToDeleteOneChar = displayScreen.value.toString();
+  var deletedString = stringToDeleteOneChar.slice(0, -1);
+  displayScreen.value = parseFloat(deletedString);
 });
 /* event listeners for operations */
 
