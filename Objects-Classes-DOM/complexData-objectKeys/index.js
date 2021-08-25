@@ -99,10 +99,3 @@ const valuesArray = Object.values(coach);
 for (let index = 0; index < Object.values(coach).length; index++) {
   console.log(valuesArray[index]); 
 }
-
-// ...spread operator
-
-const personFive = {
-  name: "Master Roshi",
-  skills: ["kung fu", "pet Caring"]
-}
