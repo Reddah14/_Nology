@@ -14,7 +14,7 @@ formInputs[0].addEventListener("focus", () => {
 
 // create handle register function & pop up
 const handleRegister = () => {
-  alert("Register form submitted! 😀");
+  alert("Register form submitted!😀");
 }
 
 // create handle input change function to validate
