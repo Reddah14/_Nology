@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <header>
+      <h1>Testing Calculator</h1>
+    </header>
+
+    <main>
+      <div class="calculator">
+        <div class="calculator__display">
+          <input type="text" class="calculator__screen" readonly />
+        </div>
+        <div class="calculator__buttons">
+          <div class="calculator__numbers">
+            <button class="calculator__number calculator__number--seven" data-cy='seven'>7</button>
+            <button class="calculator__number calculator__number--eight">8</button>
+            <button class="calculator__number calculator__number--nine">9</button>
+            <button class="calculator__number calculator__number--four">4</button>
+            <button class="calculator__number calculator__number--five">5</button>
+            <button class="calculator__number calculator__number--six">6</button>
+            <button class="calculator__number calculator__number--one">1</button>
+            <button class="calculator__number calculator__number--two">2</button>
+            <button class="calculator__number calculator__number--three">3</button>
+            <button class="calculator__number calculator__number--zero">0</button>
+            <button class="calculator__number calculator__number--point">.</button>
+          </div>
+          <div class="calculator__operators">
+            <button class="calculator__operator calculator__operator--plus">+</button>
+            <button class="calculator__operator calculator__operator--minus">-</button>
+            <button class="calculator__operator calculator__operator--times">*</button>
+            <button class="calculator__operator calculator__operator--divide">/</button>
+            <button class="calculator__operator calculator__operator--equals">=</button>
+            <button class="calculator__operator calculator__operator--clear">AC</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./calculator.js"></script>
+  </body>
+</html>
